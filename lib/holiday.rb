@@ -70,7 +70,7 @@ def all_supplies_in_holidays(holiday_hash)
   # Summer:
   #   Fourth Of July: Fireworks, BBQ
   # etc.
-  holiday_hash.keys.to_s.each do |holiday|
+  holiday_hash.keys.to_s do |holiday|
     holiday.split.collect {|word| word.capitalize!}
     holiday.join(" ")
 
