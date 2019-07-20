@@ -73,10 +73,9 @@ def all_supplies_in_holidays(holiday_hash)
   holiday_hash.keys.to_s do |holiday|
     holiday.split.collect {|word| word.capitalize!}
     holiday.join(" ")
+    puts "#{holiday}:+ holiday_hash[holiday]"
   end
-  holiday_hash.map do |holi, supply|
-    puts "#{holi}:#{supply.to_s}"
-  end
+
 end
 
 def all_holidays_with_bbq(holiday_hash)
